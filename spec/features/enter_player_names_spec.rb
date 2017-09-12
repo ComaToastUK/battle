@@ -1,9 +1,9 @@
 feature 'Enter names' do
   scenario 'submitting names' do
     visit('/')
-    fill_in :player_1_name, with: 'Dave'
-    fill_in :player_2_name, with: 'Mittens'
+    fill_in :name1, with: 'James'
+    fill_in :name2, with: 'Rory'
     click_button 'Submit'
-    expect(page).to have_content 'Dave vs. Mittens'
+    expect(page).to have_content 'James vs. Rory'
   end
 end
