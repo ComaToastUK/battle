@@ -4,6 +4,6 @@ feature 'See Hit Points' do
     fill_in :name1, with: 'James'
     fill_in :name2, with: 'Rory'
     click_button 'Submit'
-    expect(page).to have_content '100HP'
+    expect(page).to have_content 'James: 100HP'
   end
 end
