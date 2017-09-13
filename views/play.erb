@@ -14,8 +14,8 @@
   </style>
 </head>
 
-  <h1><%= @name1 %> vs. <%= @name2 %></h1>
-  <h3><%= @name1 %>: <%=@p1HP%>HP  - <%= @name2 %>: <%=@p2HP%>HP</h3>
+  <h1><%= @name1.name %> vs. <%= @name2.name %></h1>
+  <h3><%= @name1.name %>: <%=@name1.hp%>HP  - <%= @name2.name %>: <%=@name2.hp%>HP</h3>
 
   <div class="button">
     <h5> <a href="/attack">Attack</a></h5>
