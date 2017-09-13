@@ -12,10 +12,10 @@ RSpec.describe Player do
     expect(superman.hp).to eq 100
     end
 
-  describe '#attack' do
-    it 'damages the other player' do
-      superman.attack(batman)
-      expect(batman.hp).to eq 90
-    end
-  end
+  # describe '#attack' do
+  #   it 'damages the other player' do
+  #     superman.attack(batman)
+  #     expect(batman.hp).to eq 90
+  #   end
+  # end
 end
