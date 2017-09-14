@@ -15,5 +15,7 @@ feature 'Attack damage HP' do
     click_button 'OK'
     click_link 'Attack'
     expect(page).to have_content 'Rory attacked James'
-end
+    expect(page).to have_content 'James was hit for 10HP'
+  end
+
 end
