@@ -1,20 +1,27 @@
 <head>
   <style>
-  .button {
-      background-color: #4CAF50; /* Green */
-      border: none;
-      color: white;
-      padding: 15px 32px;
-      text-align: center;
-      text-decoration: none;
-      display: inline-block;
-      font-size: 16px;
-      }
+
   </style>
 </head>
-
+<% if @game.current_turn == @game.player1 %>
 <h3><%= @game.player1.name %> attacked <%= @game.player2.name %></h3>
-<h3><%= @game.player2.name %> was hit for 10HP</h3>
+<h3><%= @game.player2.name %> was hit for <%= @game.player2.damage_taken %>HP</h3>
 <h3><%= @game.player1.name %> has <%= @game.player1.hp %>HP</h3>
+<!-- <h3><%= @game.player2.name %> was hit for <%= @game.player2.damage_taken %>HP</h3> -->
 <h3><%= @game.player2.name %> has <%= @game.player2.hp %>HP</h3>
-<div class="button"><a href="/player2_play"><h4>OK</h4></a></div>
+<%else%>
+<h3><%= @game.player2.name %> attacked <%= @game.player1.name %></h3>
+<h3><%= @game.player1.name %> was hit for <%= @game.player1.damage_taken %>HP</h3>
+<h3><%= @game.player2.name %> has <%= @game.player2.hp %>HP</h3>
+<!-- <h3><%= @game.player1.name %> was hit for <%= @game.player1.damage_taken %>HP</h3> -->
+<h3><%= @game.player1.name %> has <%= @game.player1.hp %>HP</h3>
+<%end%>
+<form action="/switch-turns" method= "post">
+  <input type="submit" value ="OK">
+</form>
+</br>
+  <audio controls autoplay>
+    <source src="attack.mp3" type= "audio/mpeg">
+    <source src="theme.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+  </audio>

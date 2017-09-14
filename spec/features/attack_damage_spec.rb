@@ -6,6 +6,14 @@ feature 'Attack damage HP' do
   scenario 'P1 attacks P2' do
     sign_in_and_play
     click_link('Attack')
-    expect(page).to have_content '90HP'
+    expect(page).to have_content 'Rory was hit for 10HP'
   end
+
+  scenario 'be attacked by Player 2' do
+    sign_in_and_play
+    click_link 'Attack'
+    click_button 'OK'
+    click_link 'Attack'
+    expect(page).to have_content 'Rory attacked James'
+end
 end
