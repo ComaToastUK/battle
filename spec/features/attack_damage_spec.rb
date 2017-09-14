@@ -17,5 +17,4 @@ feature 'Attack damage HP' do
     expect(page).to have_content 'Rory attacked James'
     expect(page).to have_content 'James was hit for 10HP'
   end
-
 end

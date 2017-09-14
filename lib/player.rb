@@ -1,5 +1,4 @@
 class Player
-
   attr_reader :name, :hp, :damage_taken
 
   def initialize(name)
@@ -8,17 +7,16 @@ class Player
   end
 
   def take_damage
-      hp = @hp
-      @hp -= 10
-      @damage_taken = hp - @hp
+    hp = @hp
+    @hp -= 10
+    @damage_taken = hp - @hp
   end
 
   def heal
-      @hp += rand(25)
+    @hp += rand(25)
   end
 
   def defeated
     @hp <= 0
   end
-
 end

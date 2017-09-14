@@ -5,7 +5,7 @@ feature 'See Hit Points' do
   end
 
   scenario 'see Player 2 hit points' do
-      sign_in_and_play
-      expect(page).to have_content 'Rory: 100HP'
-    end
+    sign_in_and_play
+    expect(page).to have_content 'Rory: 100HP'
+  end
 end
