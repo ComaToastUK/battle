@@ -23,7 +23,7 @@ class Game
   end
 
   def game_over?
-    @players.select {|player| player.hp <= 0}
+    @players.select { |player| player.hp <= 0 }
   end
 
   def opponent_of(the_player)

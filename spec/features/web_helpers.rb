@@ -7,7 +7,7 @@ end
 
 def ten_turns
   19.times do
-  click_link 'Attack'
-  click_button 'OK'
+    click_link 'Attack'
+    click_button 'OK'
   end
 end
