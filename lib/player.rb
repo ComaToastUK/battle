@@ -16,7 +16,7 @@ class Player
     @hp += rand(25)
   end
 
-  def defeated
+  def lose
     @hp <= 0
   end
 end

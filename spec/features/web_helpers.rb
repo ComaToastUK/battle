@@ -6,7 +6,7 @@ def sign_in_and_play
 end
 
 def ten_turns
-  24.times do
+  19.times do
   click_link 'Attack'
   click_button 'OK'
   end

@@ -22,6 +22,10 @@ class Game
     @current_turn = opponent_of(current_turn)
   end
 
+  def game_over?
+    @players.select {|player| player.hp <= 0}
+  end
+
   def opponent_of(the_player)
     @players.reject { |player| player == the_player }.first
   end
