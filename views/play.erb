@@ -13,21 +13,30 @@
   </style>
 </head>
   <%if @game.current_turn.hp >= 1 %>
-  <h1><%= @game.player1.name %> vs. <%= @game.player2.name %></h1>
-  <h3><%= @game.player1.name %>: <%=@game.player1.hp%>HP  - <%= @game.player2.name %>: <%=@game.player2.hp%>HP</h3>
+    <h1><%= @game.player1.name %> vs. <%= @game.player2.name %></h1>
+    <h3><%= @game.player1.name %>: <%=@game.player1.hp%>HP  - <%= @game.player2.name %>: <%=@game.player2.hp%>HP</h3>
 
-  <h3><%= @game.current_turn.name %>'s turn'</h3>
+    <h3><%= @game.current_turn.name %>'s turn'</h3>
 
-  <div class="button">
-    <h5> <a href="/attack">Attack</a></h5>
-  </div>
-</br>
-  <audio controls autoplay>
-    <source src="theme.mp3" type="audio/mpeg">
-  Your browser does not support the audio element.
-  </audio>
+    <div class="button">
+      <h5> <a href="/attack">Attack</a></h5>
+    </div>
+  </br>
+    <audio controls autoplay>
+      <source src="theme.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
 
   <%else%>
-  <h1><%= @game.current_turn.name %>'s HP is depleted!</h1>
-  <h1><%= @game.current_turn.name %> lost the battle!</h1>
+    <h1><%= @game.current_turn.name %>'s HP is depleted!</h1>
+    <h1><%= @game.current_turn.name %> lost the battle!</h1>
+    <img src="tyson.gif"/>
+    <form action='/' method="get">
+      <input type='Submit' value='New Game'>
+    </form>
+
+    <audio controls autoplay>
+      <source src="16_2.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
   <%end%>

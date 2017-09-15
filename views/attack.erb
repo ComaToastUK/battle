@@ -5,12 +5,14 @@
 </head>
 <% if @game.current_turn == @game.player1 %>
 <h3><%= @game.player1.name %> attacked <%= @game.player2.name %></h3>
+<img src="slap.gif"/>
 <h3><%= @game.player2.name %> was hit for <%= @game.player2.damage_taken %>HP</h3>
 <h3><%= @game.player1.name %> has <%= @game.player1.hp %>HP</h3>
 <!-- <h3><%= @game.player2.name %> was hit for <%= @game.player2.damage_taken %>HP</h3> -->
 <h3><%= @game.player2.name %> has <%= @game.player2.hp %>HP</h3>
 <%else%>
 <h3><%= @game.player2.name %> attacked <%= @game.player1.name %></h3>
+<img src="giphy.gif"/>
 <h3><%= @game.player1.name %> was hit for <%= @game.player1.damage_taken %>HP</h3>
 <h3><%= @game.player2.name %> has <%= @game.player2.hp %>HP</h3>
 <!-- <h3><%= @game.player1.name %> was hit for <%= @game.player1.damage_taken %>HP</h3> -->

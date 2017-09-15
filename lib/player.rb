@@ -8,7 +8,7 @@ class Player
 
   def take_damage
     hp = @hp
-    @hp -= 10
+    @hp -= rand(41)
     @damage_taken = hp - @hp
   end
 
